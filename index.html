@@ -1,92 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CookieClicker---Nat_Fab_Bri</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-<<<<<<< Updated upstream
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
 </head>
+
 <body>
-    <main class="flex-container">
-        <section class="cookie"> 
-          <div class="display">
-            <p id="score" class="row">0</p>
-            <p id="option" class="row">option</p>
-          </div>  
-          <div class="Game">
-            <button id="click_cookie" class="row">click</button>
-          </div>
-        </section>
-        <section class="store">
-            <div class="row">Multi_2</div>
-            <div class="row">Multi_5</div>
-            <div class="row">Multi_20</div>
-            <div class="row">Auto_clic</div>
-            <div class="row">Bonus</div>
-        </section>
-=======
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    
-  </head>
-  <body>
-     <div class="animated-background"> 
-    <main class="container mt-5">
-        <h1 class="text-center">Cookie Clicker</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div id="score" class="card-header">
-                        score
-                    </div>
-                    <div class="card-body">
-                        <button id="options" class="btn btn-danger mb-3">option</button>
-                    </div>
-                    <div class="Auto_click card-body">
-                        <button id="Auto_click" class="btn-info"><p>Auto_click <span id="display-Auto_click"></span></p></button>
-                    </div>
-                    <div class="Bonus card-body">
-                        <button id="Bonus" class="btn-success"><p>Bonus <span id="display-Bonus"></span></p></button>
-                    </div>
-                </div>
+    <main class="container">
+        
+        <div class="row cookie-section>
+            <div class="col-md text-center">
+                <h1>Cookie Clicker</h1>
+                <div class="counter display-4 mb-3" id="counter">0</div>
+                <div class="counter display-4 mb-3" id="options">options</div>
+                <button id="cookie-button" class="btn md"> <img src="./img/cookie.png" alt=""></button>
             </div>
-            <div class="col-md-4 text-center">
-                <div class="cookie-section">
-                    <div class="counter display-4 mb-3" id="counter">0</div>
-                    <button id="cookie-button" class="btn mb-4"> <img src="./img/cookie.png" alt=""></button>
+        </div>
+        </div>
+
+        <div class="store col-md-4">
+            <div class="card mb-3">
+                <div class="card-header">
+                    store
                 </div>
-            </div>
-            <div class="store col-md-4">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        store
-                    </div>
-                    <div class="Multiplier_2 card-body">
-                        <button id="Multiplier_2" class="btn-primary"><p>Multiplier_2: <span id="display-Multiplier_2">×2</span></p></button>
-                    </div>
-                    <div class="Multiplier_5 card-body">
-                        <button id="Multiplier_5" class="btn-primary"><p>Multiplier_5: <span id="display-Multiplier_5">×5</span></p></button>
-                    </div>
-                    <div class="Multiplier_20 card-body">
-                        <button id="Multiplier_20" class="btn-primary"><p>Multiplier_20: <span id="display-Multiplier_20">×20</span></p></button>
-                    </div>
-                    <!-- <div class="Auto_click card-body">
+                <div class="Multiplier_2 card-body">
+                    <button id="Multiplier_2" class="btn-primary">
+                        <p>Multiplier_2: <span id="display-Multiplier_2">×2</span></p>
+                    </button>
+                </div>
+                <div class="Multiplier_5 card-body">
+                    <button id="Multiplier_5" class="btn-primary">
+                        <p>Multiplier_5: <span id="display-Multiplier_5">×5</span></p>
+                    </button>
+                </div>
+                <div class="Multiplier_20 card-body">
+                    <button id="Multiplier_20" class="btn-primary">
+                        <p>Multiplier_20: <span id="display-Multiplier_20">×20</span></p>
+                    </button>
+                </div>
+                <!-- <div class="Auto_click card-body">
                         <button id="Auto_click" class="btn-primary"><p>Auto_click <span id="display-Auto_click"></span></p></button>
                     </div>
                     <div class="Bonus card-body">
                         <button id="Bonus" class="btn-primary"><p>Bonus <span id="display-Bonus"></span></p></button>
                     </div> -->
-                </div>
             </div>
         </div>
->>>>>>> Stashed changes
+
     </main>
-    
+
 </body>
+
 </html>
