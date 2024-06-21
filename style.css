@@ -1,7 +1,48 @@
+/* importing fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 .row {
     margin: 10px 0;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
+}
+
+/* Animation for cookie when loading */
+
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    60% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+#cookie-button {
+    animation-duration: 1.3s;
+    animation-name: bounceIn;
+    border: none;
+    background-color: none;
+  }
+
+/* Animation for cookie when clicked */
+
+#cookie-button:active{
+    transform: translateY(4px);
+}
+
+/* Styling titles */
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
 }
