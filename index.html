@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CookieClicker---Nat_Fab_Bri</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    
-  </head>
-  <body>
-     <div class="animated-background">  
-    <main class="container mt-5">
-        <h1 class="text-center">Cookie Clicker</h1>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div id="score" class="card-header">
-                        score
-                    </div>
-                    <div class="card-body">
-                        <button id="options" class="btn btn-danger mb-3">option</button>
-                    </div>
-                    <div class="Auto_click card-body">
-                        <button id="Auto_click" class="btn-info"><p>Auto_click <span id="display-Auto_click"></span></p></button>
-                    </div>
-                    <div class="Bonus card-body">
-                        <button id="Bonus" class="btn-success"><p>Bonus <span id="display-Bonus"></span></p></button>
-                    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <!-- This is the cookie section, with the counter, the click(cookie img) and the option "options" status -->
+                <div class="col-12 mt-3">
+                    <h1>Cookie Clicker</h1>
+                </div>
+                <div class="col-12">
+                    <div class="counter display-5" id="counter">0</div>
+                </div>
+                <div class="col-12">
+                    <button type="button" id="cookie-button" class="btn mb-4">
+                        <img src="img/cookie.png" alt="cookie button" width="200px">
+                    </button>
+                </div>
+                <div class="col-12">
+                    <h3 id="options">Status: click * 2</h3>
                 </div>
             </div>
-            <div class="col-md-4 text-center">
-                <div class="cookie-section">
-                    <div class="counter display-4 mb-3" id="counter">0</div>
-                    <button id="cookie-button" class="btn mb-4"> <img src="./img/cookie.png" alt=""></button>
+            <div class="row justify-content-around">
+                <!-- This is the "STORE" section where we can buy options with our cookies -->
+                <div class="col-12 mt-3">
+                    <h1>STORE</h1>
+                </div>
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="Multiplier_2" class="btn-secondary">
+                        Click * 2 <div id="display-Multiplier_2">2 $</div>
+                    </button>
+                </div>
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="Multiplier_5" class="btn-secondary">
+                        Click * 5 <div id="display-Multiplier_5">5 $</div>
+                    </button>
+                </div>
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="Multiplier_20" class="btn-secondary">
+                        Click * 20 <div id="display-Multiplier_20">20 $</div>
+                    </button>
+                </div>
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="Auto_click" class="btn-secondary">
+                        Auto Click <div id="display-Auto_click">100 $</div>
+                    </button>
+                </div>
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="Bonusk" class="btn-secondary">
+                        Bonus <div id="display-Bonus">500 $</div>
+                    </button>   
                 </div>
             </div>
-            <div class="store col-md-4">
-                <div class="card mb-3">
-                    <div class="card-header">
-                        store
-                    </div>
-                    <div class="Multiplier_2 card-body">
-                        <button id="Multiplier_2" class="btn-primary"><p>Multiplier_2: <span id="display-Multiplier_2">×2</span></p></button>
-                    </div>
-                    <div class="Multiplier_5 card-body">
-                        <button id="Multiplier_5" class="btn-primary"><p>Multiplier_5: <span id="display-Multiplier_5">×5</span></p></button>
-                    </div>
-                    <div class="Multiplier_20 card-body">
-                        <button id="Multiplier_20" class="btn-primary"><p>Multiplier_20: <span id="display-Multiplier_20">×20</span></p></button>
-                    </div>
-                    <!-- <div class="Auto_click card-body">
-                        <button id="Auto_click" class="btn-primary"><p>Auto_click <span id="display-Auto_click"></span></p></button>
-                    </div>
-                    <div class="Bonus card-body">
-                        <button id="Bonus" class="btn-primary"><p>Bonus <span id="display-Bonus"></span></p></button>
-                    </div> -->
+            <div class="row justify-content-around">
+                <!-- This is the footer section -->
+                <div class="col-12 mt-2 mb-2">
+                    <p>Copyright @ CookieClicker---Nat_Fab_Bri</p>
+                    <a href="https://github.com/brieucdegoussencourt/CookieClicker---Nat_Fab_Bri" target="_blank"><img src="img/Github-desktop-logo-symbol.png" width="50px" alt="github icon"></a>
                 </div>
             </div>
         </div>
     </main>
-  </div>  
-  </body>
-
-  <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
+</body>
 </html>
