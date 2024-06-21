@@ -17,15 +17,17 @@
                     <h1>COOKIE CLICKER</h1>
                 </div>
                 <div class="col-12">
-                    <h2 id="counter">0</h2>
+                    <div class="counter display-5" id="clickCount"></div>
                 </div>
                 <div class="col-12">
-                    <button type="button" id="cookie-button" class="btn">
-                        <img src="img/cookie.png" alt="cookie button" width="200px">
+                    <button type="button" id="cookie-button" class="btn mb-4">
+                        <div class="cookie-area" id="cookieArea">
+                            <img src="img/cookie.png" alt="cookie button" width="200px">
+                        </div>
                     </button>
                 </div>
-                <div class="col-12 mt-3 mb-3">
-                    <h4 id="options">Status: click * 2</h4>
+                <div class="col-12">
+                    <h3 id="clickValue">Clic Value: 1</h3>
                 </div>
             </div>
             <div class="row justify-content-around">
@@ -34,30 +36,31 @@
                     <h1>STORE</h1>
                 </div>
                 <div class="col-12 col-md-2 p-2">
-                    <button type="button" id="Multiplier_2" class="btn btn-outline-secondary">
-                        Click * 2 <div id="display-Multiplier_2">2 $</div>
+                    <button type="button" id="multiplier_A_" class="btn-secondary">
+                        Click * 2 - Cost: 2 $
                     </button>
                 </div>
                 <div class="col-12 col-md-2 p-2">
-                    <button type="button" id="Multiplier_5" class="btn btn-outline-primary">
-                        Click * 5 <div id="display-Multiplier_5">5 $</div>
+                    <button type="button" id="multiplier_B_" class="btn-secondary">
+                        Click * 5 - Cost: 5 $
                     </button>
                 </div>
                 <div class="col-12 col-md-2 p-2">
-                    <button type="button" id="Multiplier_20" class="btn btn-outline-success">
-                        Click * 20 <div id="display-Multiplier_20">20 $</div>
+                    <button type="button" id="multiplier_C_" class="btn-secondary">
+                        Click * 20 - Cost: 20 $
                     </button>
                 </div>
                 <div class="col-12 col-md-2 p-2">
-                    <button type="button" id="Auto_click" class="btn btn-outline-danger">
-                        Auto Click <div id="display-Auto_click">100 $</div>
+                    <button type="button" id="autoClicker" class="btn-secondary">
+                        Auto Click - Cost: 100 $
                     </button>
                 </div>
-                <div class="col-12 col-md-2 p-2 mb-2">
-                    <button type="button" id="Bonusk" class="btn btn-outline-warning">
-                        Bonus <div id="display-Bonus">500 $</div>
-                    </button>   
+                <div class="col-12 col-md-2 p-2">
+                    <button type="button" id="bonus" class="btn-secondary">
+                        Bonus Exponential! - Cost: 500 $
+                    </button>
                 </div>
+                <div class="timer" id="timer"></div>
             </div>
             <div class="row justify-content-around">
                 <!-- This is the footer section -->
@@ -68,5 +71,6 @@
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
