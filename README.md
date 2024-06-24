@@ -2,8 +2,6 @@
  
  Working in group to create an online game called Cookie Clicker
 
-
-
  ## MAIN FEATURE
  - Javascript
  - HTML/CSS [(bootstrap)](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
@@ -15,31 +13,31 @@
 * **Nathaniel** - [GitHub](https://github.com/NateGithub9)
 * **Brieuc** - [GitHub](https://github.com/brieucdegoussencourt)
 
-
- ## What, When, Why?
+ ## WHAT ? WHEN ? WHY ?
 
 This challenge is part of the web developer training @ [Becode](https://becode.org/fr/) - June 2024.
 
-The aime of the project is to consolidate on what we've leanrned so far and more specifically to develop our skills with Javascript.
+The aim of the project is to consolidate on what we've leanrned so far and more specifically to develop our skills with Javascript.
 
 Here are the full [guidelines](https://github.com/brieucdegoussencourt/Swartz-9/blob/main/2.The-Hill/1.Javascript/cookieClicker.md)
 
+## HOW ? WHO ?
 
-## How, Who ?
+The team is composed of three people: **Fabrice, Nathaniel & Brieuc**.
 
-The team is composed of three people: Fabrice, Nathaniel and Brieuc.
+We have 6 days to create an online game kinda like this [one](https://orteil.dashnet.org/cookieclicker/).
 
-They have 6 days to create an online game kinda like this [one](https://orteil.dashnet.org/cookieclicker/).
-
-They will work mainly remotely thanks to **Discord** and **Github**.
+We will work mainly remotely thanks to **Discord** and **Github**.
 
 ### DAY #1
 
 To start we got together, read the challenge guidelines and shared our toughts on how to proceed.
 
-We made a rough mockup on paper to set the main functionality in an HTML document.
+Firstly we decided to set clear defined roles in order to split the work. 
 
 We organised the team as such: Fabrice woudl tackle the HTML structure and basic CSS, Nathaniel would take care of Javascript and Brieuc would handle the Project Manager role in ordrer to organize the work.
+
+We made a rough mockup on paper to have a general vision of the HTML document.
 
 A github repository was created with the main files and we were ready to start.
 
@@ -54,11 +52,15 @@ This allow to have clear objectives to build up the project slowly but surely.
 
 ![screenshot#1](/screenshots/github_project.png)
 
+Everyone focused on his role.
+
 ### DAY #3
 
-We reunited in the morning through Discord and shared our progress. Nathaniel was already wall advanced with Javascript and Fabrice had a first draft of the page.
+We reunited in the morning through Discord and shared our progress. 
 
-Brieuc took in charge the second draft of the page and by the end of the day we could publish our V0 and tag it in our repository.
+Nathaniel was already well advanced with Javascript and Fabrice had a first draft of the page.
+
+Brieuc took in charge the second draft of the page and by the end of the day we could publish our first version online.
 
 ### DAY #4
 
