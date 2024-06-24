@@ -55,7 +55,7 @@ multiplier.addEventListener('click', () => {
     if (clicks >= multiplier_A_Cost) {
         clicks -= multiplier_A_Cost;
         multiplier_A_Cost *= 2;
-        multiplier.innerHTML = `Click * 2 - Cost: ${multiplier_A_Cost}$`;
+        multiplier.innerHTML = `Click * 2 ${multiplier_A_Cost}$`;
         multiplier_A_Active = true;
         multiplier_B_Active = false;
         multiplier_C_Active = false;
@@ -67,7 +67,7 @@ multiplierB.addEventListener('click', () => {
     if (clicks >= multiplier_B_Cost) {
         clicks -= multiplier_B_Cost;
         multiplier_B_Cost *= 3;
-        multiplierB.innerHTML = `Click * 5 - Cost: ${multiplier_B_Cost}$`;
+        multiplierB.innerHTML = `Click * 5 ${multiplier_B_Cost}$`;
         multiplier_B_Active = true;
         multiplier_A_Active = false;
         multiplier_C_Active = false;
@@ -79,7 +79,7 @@ multiplierC.addEventListener('click', () => {
     if (clicks >= multiplier_C_Cost) {
         clicks -= multiplier_C_Cost;
         multiplier_C_Cost *= 4;
-        multiplierC.innerHTML = `Click * 20 - Cost: ${multiplier_C_Cost}$`;
+        multiplierC.innerHTML = `Click * 20 ${multiplier_C_Cost}$`;
         multiplier_C_Active = true;
         multiplier_A_Active = false;
         multiplier_B_Active = false;
@@ -112,7 +112,7 @@ function applyBonus() {
 }
 
 function updateBonus() {
-    bonus.innerHTML = `Bonus <br> ${bonusCost}$`;
+    bonus.innerHTML = `Bonus: ${bonusCost} $`;
 }
 
 //timer
@@ -131,7 +131,8 @@ function activateBonus() {
             if (bonusDuration <= 0) {
                 clearInterval(bonusTimer);
                 bonusActive = false;
-                bonus.innerHTML = `Bonus - Cost: ${bonusCost}`;
+                bonus.innerHTML = `Bonus
+                : ${bonusCost}`;
                 updateTimer(-1);  // reset du timer display
             }
         }, 1000);
@@ -143,13 +144,16 @@ bonus.addEventListener('click', () => {
 
 function updateTimer(seconds) {
     if (seconds >= 0) {
+        timer.style.display = 'block';
         timer.innerHTML = `Bonus time remaining: ${seconds}s`;
     } else {
+        timer.style.display = 'none';
         timer.innerHTML = ``;
     }
 }
 
 updateClickCount();
 updateBonus();
-updateTimer(bonusDuration); // timer display
+updateTimer(-1); // Initially hide the timer
+
 //fin: Bonus
