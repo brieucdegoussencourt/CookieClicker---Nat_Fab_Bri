@@ -1,5 +1,8 @@
 # CookieClicker @ Nat_Fab_Bri
+ 
  Working in group to create an online game called Cookie Clicker
+
+
 
  ## MAIN FEATURE
  - Javascript
@@ -13,28 +16,50 @@
 * **Brieuc** - [GitHub](https://github.com/brieucdegoussencourt)
 
 
- ## What, Why, When, How, Who.
+ ## What, When, Why?
 
-### JUNE 2024
+This challenge is part of the web developer training @ [Becode](https://becode.org/fr/) - June 2024.
 
-Fabrice, Nathaniel and Brieuc have 6 days to create an online game. 
+The aime of the project is to consolidate on what we've leanrned so far and more specifically to develop our skills with Javascript.
 
 Here are the full [guidelines](https://github.com/brieucdegoussencourt/Swartz-9/blob/main/2.The-Hill/1.Javascript/cookieClicker.md)
 
-The challenge is part of the Wev Developer bootcamp the follow @ Becode.
 
-### THE FIRST DAY
+## How, Who ?
 
 The team is composed of three people: Fabrice, Nathaniel and Brieuc.
 
-We got together, read the challenge guidelines and shared our toughts on how to proceed.
+They have 6 days to create an online game kinda like this [one](https://orteil.dashnet.org/cookieclicker/).
 
-We made a mockup on paper
+They will work mainly remotely thanks to **Discord** and **Github**.
 
-We organised the team as such: Fabrice woudl tackle the HTML structure and basic CSS, Nathaniel would take care of Javascript and Brieuc would take the Project Manager role in ordrer to set the project on track.
+### DAY #1
 
-A github repository was created with the main files.
+To start we got together, read the challenge guidelines and shared our toughts on how to proceed.
 
-<img src="/screenshots/mockup#1.png" alt="mockup#1" />
+We made a rough mockup on paper to set the main functionality in an HTML document.
+
+We organised the team as such: Fabrice woudl tackle the HTML structure and basic CSS, Nathaniel would take care of Javascript and Brieuc would handle the Project Manager role in ordrer to organize the work.
+
+A github repository was created with the main files and we were ready to start.
+
+![screenshot#1](/screenshots/mockup2.jpg)
 
 
+### DAY #2
+
+Following the "Agile" methodology we broke down the work into small steps (cards in github projects). 
+
+This allow to have clear objectives to build up the project slowly but surely.
+
+![screenshot#1](/screenshots/github_project.png)
+
+### DAY #3
+
+We reunited in the morning through Discord and shared our progress. Nathaniel was already wall advanced with Javascript and Fabrice had a first draft of the page.
+
+Brieuc took in charge the second draft of the page and by the end of the day we could publish our V0 and tag it in our repository.
+
+### DAY #4
+
+After a well deserved weekend the team got back at it. The site is now puplished and functional but there is still work to do. We fine tune the styles and functions of the game and we check if the site is valid in terms of [HTML standards](https://validator.w3.org/), [performance, accessibility, SEO...](https://pagespeed.web.dev/analysis/https-brieucdegoussencourt-github-io-CookieClicker---Nat_Fab_Bri/56jpo2ctct?form_factor=desktop)
