@@ -17,7 +17,7 @@
 
 This challenge is part of the web developer training @ [Becode](https://becode.org/fr/) - June 2024.
 
-The aim of the project is to consolidate on what we've leanrned so far and more specifically to develop our skills with Javascript.
+The aim of the project is to consolidate on what we've leanrned so far and more specifically to develop our Javascript skills.
 
 Here are the full [guidelines](https://github.com/brieucdegoussencourt/Swartz-9/blob/main/2.The-Hill/1.Javascript/cookieClicker.md)
 
@@ -31,9 +31,9 @@ We will work mainly remotely thanks to **Discord** and **Github**.
 
 ### DAY #1
 
-To start we got together, read the challenge guidelines and shared our toughts on how to proceed.
+To get the project on track we sat together, read the challenge guidelines and shared our toughts on how to proceed.
 
-Firstly we decided to set clear defined roles in order to split the work. 
+First we decided to define clear roles in order to split the work. 
 
 We organised the team as such: Fabrice woudl tackle the HTML structure and basic CSS, Nathaniel would take care of Javascript and Brieuc would handle the Project Manager role in ordrer to organize the work.
 
@@ -60,8 +60,18 @@ We reunited in the morning through Discord and shared our progress.
 
 Nathaniel was already well advanced with Javascript and Fabrice had a first draft of the page.
 
-Brieuc took in charge the second draft of the page and by the end of the day we could publish our first version online.
+Brieuc took in charge the second draft of the page and by the end of the day we could publish our first version online by merging front and back end operations.
+
+![screenshot#2](/screenshots/site.png)
+
+
 
 ### DAY #4
 
-After a well deserved weekend the team got back at it. The site is now puplished and functional but there is still work to do. We fine tune the styles and functions of the game and we check if the site is valid in terms of [HTML standards](https://validator.w3.org/), [performance, accessibility, SEO...](https://pagespeed.web.dev/analysis/https-brieucdegoussencourt-github-io-CookieClicker---Nat_Fab_Bri/56jpo2ctct?form_factor=desktop)
+After a well deserved weekend the team got back at it. We have to work on details now.
+
+Some functionality need updates and we also start working on [HTML standards](https://validator.w3.org/), [performance, accessibility, SEO...](https://pagespeed.web.dev/analysis/https-brieucdegoussencourt-github-io-CookieClicker---Nat_Fab_Bri/56jpo2ctct?form_factor=desktop)
+
+![screenshot#3](/screenshots/performance.png)
+
+As we are well advanced in our timeline (deadline is on day #6) we decide to add some extra option.
