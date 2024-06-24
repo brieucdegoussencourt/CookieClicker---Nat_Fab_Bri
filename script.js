@@ -1,4 +1,4 @@
-//déclaraions
+//déclarations
 let clicks = 0;
 let multiplier_A_Cost = 2;
 let multiplier_B_Cost = 5;
@@ -29,10 +29,12 @@ const autoClicker = document.getElementById('autoClicker');
 function updateClickCount() {
     clickCount.textContent = `${clicks}`;
 }
+
 //clic value
 function updateClickValue(value) {
     clickValue.textContent = `Click Value: ${value}`;
 }
+
 cookieArea.addEventListener('click', () => {
     let clickIncrement = 1;
 
@@ -62,6 +64,7 @@ multiplier.addEventListener('click', () => {
     }
     updateClickCount();
 });
+
 //multiplier B
 multiplierB.addEventListener('click', () => {
     if (clicks >= multiplier_B_Cost) {
@@ -74,6 +77,7 @@ multiplierB.addEventListener('click', () => {
     }
     updateClickCount();
 });
+
 //multiplier C
 multiplierC.addEventListener('click', () => {
     if (clicks >= multiplier_C_Cost) {
@@ -86,14 +90,32 @@ multiplierC.addEventListener('click', () => {
     }
     updateClickCount();
 });
+
 //Autoclick
 autoClicker.addEventListener('click', () => {
-    if (!autoClickerActive && clicks >= autoClickerCost) {
-        clicks -= autoClickerCost;
-        autoClickerActive = true;
-        autoClicker.innerHTML = "Auto Click <br> Active";
+    if (!autoClickerActive) {
+        if (clicks >= autoClickerCost) {
+            clicks -= autoClickerCost;
+            autoClickerCost *= 2;
+            autoClickerActive = true;
+            autoClicker.innerHTML = "Auto Click <br> Active";
 
-        autoClickInterval = setInterval(autoClickerAction, 1000);
+            autoClickInterval = setInterval(autoClickerAction, 1000);
+            cookieArea.classList.add('spin'); // spin 
+
+            if (bonusActive) {
+                cookieArea.classList.remove('spin');
+                cookieArea.classList.add('fastSpin');
+            }
+        }
+    } else {
+        autoClickerActive = false;
+        clearInterval(autoClickInterval);
+        cookieArea.classList.remove('spin'); // remove spin
+
+        if (!bonusActive) {
+            autoClicker.innerHTML = `Auto Click <br> ${autoClickerCost} $`;
+        }
     }
     updateClickCount();
 });
@@ -124,6 +146,11 @@ function activateBonus() {
         bonusDuration = 30;
         updateTimer(bonusDuration);
 
+        if (autoClickerActive) {
+            cookieArea.classList.remove('spin');
+        }
+        cookieArea.classList.add('fastSpin'); // Fast spin!
+
         bonusTimer = setInterval(() => {
             bonusDuration--;
             updateTimer(bonusDuration);
@@ -131,13 +158,18 @@ function activateBonus() {
             if (bonusDuration <= 0) {
                 clearInterval(bonusTimer);
                 bonusActive = false;
-                bonus.innerHTML = `Bonus
-                : ${bonusCost}`;
+                bonus.innerHTML = `Bonus: ${bonusCost}`;
                 updateTimer(-1);  // reset du timer display
+
+                cookieArea.classList.remove('fastSpin'); // Remove fast spinning
+                if (autoClickerActive) {
+                    cookieArea.classList.add('spin'); // Rajout du spin normal si l'auto clicker est actif
+                }
             }
         }, 1000);
     }
 }
+
 bonus.addEventListener('click', () => {
     activateBonus();
 });
@@ -154,6 +186,6 @@ function updateTimer(seconds) {
 
 updateClickCount();
 updateBonus();
-updateTimer(-1); // Initially hide the timer
+updateTimer(-1); // Hide timer
 
 //fin: Bonus
