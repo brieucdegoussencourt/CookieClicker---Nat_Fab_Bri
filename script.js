@@ -131,7 +131,7 @@ function activateBonus() {
             if (bonusDuration <= 0) {
                 clearInterval(bonusTimer);
                 bonusActive = false;
-                bonus.innerHTML = `Bonus - Cost: ${bonusCost}`;
+                bonus.innerHTML = `Bonus: ${bonusCost}`;
                 updateTimer(-1);  // reset du timer display
             }
         }, 1000);
