@@ -112,7 +112,7 @@ function applyBonus() {
 }
 
 function updateBonus() {
-    bonus.innerHTML = `Bonus: ${bonusCost} $`;
+    bonus.innerHTML = `Bonus: <br> ${bonusCost} $`;
 }
 
 //timer
