@@ -17,9 +17,9 @@ Working in a group to create an online game called "Cookie Clicker."
 
 ## AUTHORS/ASSIGNMENTS
 
-* **Fabrice** - [GitHub](https://github.com/fabricetchounkeu)    
-* **Nathaniel** - [GitHub](https://github.com/NateGithub9)
-* **Brieuc** - [GitHub](https://github.com/brieucdegoussencourt)
+* **Fabrice Tchounkeu** - [GitHub](https://github.com/fabricetchounkeu)    
+* **Nathaniel Akingbade** - [GitHub](https://github.com/NateGithub9)
+* **Brieuc Degoussencourt** - [GitHub](https://github.com/brieucdegoussencourt)
 
 ## WHAT? WHEN? WHY?
 
@@ -27,7 +27,7 @@ This challenge is part of the web developer training @ [Becode](https://becode.o
 
 The aim of the project is to consolidate what we've learned so far and more specifically to develop our JavaScript skills.
 
-Here are the full [guidelines](https://github.com/brieucdegoussencourt/Swartz-9/blob/main/2.The-Hill/1.Javascript/cookieClicker.md).
+Here are the full [guidelines](https://github.com/becodeorg/Swartz-9/blob/main/2.The-Hill/1.Javascript/cookieClicker.md).
 
 ## CHALLENGE
 
