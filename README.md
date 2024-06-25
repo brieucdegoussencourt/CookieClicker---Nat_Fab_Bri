@@ -1,5 +1,5 @@
 # CookieClicker @ Nat_Fab_Bri
-Working in a group to create an online game called "Cookie Clicker."
+### Here's our [Cookie Clicker](https://brieucdegoussencourt.github.io/CookieClicker---Nat_Fab_Bri//)!!
 
 ## MAIN FEATURES
 
