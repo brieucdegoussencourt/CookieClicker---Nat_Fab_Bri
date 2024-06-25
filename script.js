@@ -25,6 +25,15 @@ const bonus = document.getElementById('bonus');
 const timer = document.getElementById('timer');
 const autoClicker = document.getElementById('autoClicker');
 
+// Prompt user name
+function setUserName() {
+    const userName = prompt("Please enter your name:");
+    if (userName) {
+        welcomeMessage.textContent = `Welcome ${userName}`;
+    }
+}
+setUserName();
+
 //clic count
 function updateClickCount() {
     clickCount.textContent = `${clicks}`;

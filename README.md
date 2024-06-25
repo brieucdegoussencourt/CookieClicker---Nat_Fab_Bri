@@ -76,3 +76,15 @@ As we are well advanced in our timeline (deadline is on day #6), we decided to a
 
 - Information (tooltips) on the buttons
 - Animated cookie for the auto-click and bonus (spin and a faster spin for the bonus)
+
+## THINGS WE LEARNED
+
+- Communication is key (both verbal and written).
+- Using Git Projects.
+- Dedicated times for testing are essential.
+- Version tracking is very important.
+- Estimating the time to implement new features is crucial.
+
+## ROOM FOR IMPROVEMENT
+
+- Adding "levels".
