@@ -128,7 +128,7 @@ function autoClickerAction() {
 //début: Bonus
 function applyBonus() {
     if (bonusActive) {
-        clicks *= 2;
+        clicks *= 1,15;
         updateClickCount();
     }
 }
