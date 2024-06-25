@@ -196,15 +196,3 @@ function updateTimer(seconds) {
 updateClickCount();
 updateBonus();
 updateTimer(-1); // Hide timer
-
-//fin: Bonus
-
-//vibrate onclick
-
-function vibrate(){
-     if(!("vibrate" in navigator)){
-       alert("Vibrate not supported!");
-       return;
-     }
-     navigator.vibrate(5500);
-   }
