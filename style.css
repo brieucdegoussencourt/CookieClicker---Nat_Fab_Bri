@@ -10,6 +10,21 @@
   text-align: center;
 }
 
+/* Welcome Message */
+
+#welcomeMessage{
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Style Timer */
+
+#timer{
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-size: 20px;
+}
 /* Animation for cookie when loading */
 
 @keyframes bounceIn {
