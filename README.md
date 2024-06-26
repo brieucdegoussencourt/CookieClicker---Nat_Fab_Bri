@@ -82,6 +82,7 @@ After a well-deserved weekend, the team got back to it. We had to work on detail
 Some functionalities needed updates, and we also started working on [HTML standards](https://validator.w3.org/), [performance, accessibility, and SEO](https://pagespeed.web.dev/analysis/https-brieucdegoussencourt-github-io-CookieClicker---Nat_Fab_Bri/56jpo2ctct?form_factor=desktop).
 
 ![screenshot#4](/screenshots/performance.png)
+![screenshot#5](/screenshots/html_validation.png)
 
 As we were well advanced in our timeline (the deadline was on day #6), we decided to add some extra options (tooltips and an animated cookie for the "Auto-Click" and the "Bonus" features)
 
