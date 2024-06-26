@@ -1,20 +1,26 @@
-//déclarations
+// Declarations
 let clicks = 0;
 let multiplier_A_Cost = 2;
 let multiplier_B_Cost = 5;
 let multiplier_C_Cost = 200;
-let bonusCost = 500;
+let bonusCost = 8000;
+let multiplier_A_Count = 0;
+let multiplier_B_Count = 0;
+let multiplier_C_Count = 0;
+let autoClickerCost = 100;
 let multiplier_A_Active = false;
 let multiplier_B_Active = false;
 let multiplier_C_Active = false;
 let autoClickerActive = false;
 let bonusActive = false;
-let autoClickerCost = 100;
 let autoClickInterval;
 let bonusDuration = 30;
 let bonusTimer;
 
-//get element ID
+// Tracking cumulative multiplier
+let cumulativeMultiplier = 1;
+
+// Get element ID
 const cookieArea = document.getElementById('cookieArea');
 const clickCount = document.getElementById('clickCount');
 const multiplier = document.getElementById('multiplier_A_');
@@ -24,6 +30,7 @@ const clickValue = document.getElementById('clickValue');
 const bonus = document.getElementById('bonus');
 const timer = document.getElementById('timer');
 const autoClicker = document.getElementById('autoClicker');
+const welcomeMessage = document.getElementById('welcomeMessage');
 
 // Prompt user name
 function setUserName() {
@@ -34,73 +41,70 @@ function setUserName() {
 }
 setUserName();
 
-//clic count
+// Update click count
 function updateClickCount() {
     clickCount.textContent = `${clicks}`;
 }
 
-//clic value
-function updateClickValue(value) {
-    clickValue.textContent = `Click Value: ${value}`;
+// Update click value
+function updateClickValue() {
+    let clickIncrement = calculateClickValue();
+    clickValue.textContent = `Click Value: ${clickIncrement}`;
+}
+
+// Calculate the current click value based on multipliers
+function calculateClickValue() {
+    return 1 * (multiplier_A_Count * 2 + multiplier_B_Count * 5 + multiplier_C_Count * 20 + 1);
 }
 
 cookieArea.addEventListener('click', () => {
-    let clickIncrement = 1;
-
-    if (multiplier_A_Active) {
-        clickIncrement = 2;
-    } else if (multiplier_B_Active) {
-        clickIncrement = 5;
-    } else if (multiplier_C_Active) {
-        clickIncrement = 20;
-    }
-
+    let clickIncrement = calculateClickValue();
     clicks += clickIncrement;
     updateClickCount();
-    updateClickValue(clickIncrement);
+    updateClickValue();
     applyBonus();
 });
 
-//multiplier A
+// Multiplier A
 multiplier.addEventListener('click', () => {
     if (clicks >= multiplier_A_Cost) {
         clicks -= multiplier_A_Cost;
         multiplier_A_Cost *= 2;
+        multiplier_A_Count++;
         multiplier.innerHTML = `Click * 2 <br> ${multiplier_A_Cost}$`;
-        multiplier_A_Active = true;
-        multiplier_B_Active = false;
-        multiplier_C_Active = false;
+
+        updateClickCount();
+        updateClickValue();
     }
-    updateClickCount();
 });
 
-//multiplier B
+// Multiplier B
 multiplierB.addEventListener('click', () => {
     if (clicks >= multiplier_B_Cost) {
         clicks -= multiplier_B_Cost;
         multiplier_B_Cost *= 3;
+        multiplier_B_Count++;
         multiplierB.innerHTML = `Click * 5 <br> ${multiplier_B_Cost}$`;
-        multiplier_B_Active = true;
-        multiplier_A_Active = false;
-        multiplier_C_Active = false;
+
+        updateClickCount();
+        updateClickValue();
     }
-    updateClickCount();
 });
 
-//multiplier C
+// Multiplier C
 multiplierC.addEventListener('click', () => {
     if (clicks >= multiplier_C_Cost) {
         clicks -= multiplier_C_Cost;
         multiplier_C_Cost *= 4;
+        multiplier_C_Count++;
         multiplierC.innerHTML = `Click * 20 <br> ${multiplier_C_Cost}$`;
-        multiplier_C_Active = true;
-        multiplier_A_Active = false;
-        multiplier_B_Active = false;
+
+        updateClickCount();
+        updateClickValue();
     }
-    updateClickCount();
 });
 
-//Autoclick
+// Autoclick
 autoClicker.addEventListener('click', () => {
     if (!autoClickerActive) {
         if (clicks >= autoClickerCost) {
@@ -130,14 +134,14 @@ autoClicker.addEventListener('click', () => {
 });
 
 function autoClickerAction() {
-    clicks += 20;
+    clicks += calculateClickValue();
     updateClickCount();
 }
 
-//début: Bonus
+// Bonus functions
 function applyBonus() {
     if (bonusActive) {
-        clicks *= 1,15;
+        clicks *= 1,5;
         updateClickCount();
     }
 }
@@ -146,7 +150,7 @@ function updateBonus() {
     bonus.innerHTML = `Bonus: <br> ${bonusCost} $`;
 }
 
-//timer
+// Timer
 function activateBonus() {
     if (!bonusActive && clicks >= bonusCost) {
         clicks -= bonusCost;
@@ -168,12 +172,13 @@ function activateBonus() {
                 clearInterval(bonusTimer);
                 bonusActive = false;
                 bonus.innerHTML = `Bonus: ${bonusCost}`;
-                updateTimer(-1);  // reset du timer display
+                updateTimer(-1);  // Reset timer display
 
                 cookieArea.classList.remove('fastSpin'); // Remove fast spinning
                 if (autoClickerActive) {
-                    cookieArea.classList.add('spin'); // Rajout du spin normal si l'auto clicker est actif
+                    cookieArea.classList.add('spin'); // Add normal spin if autoclicker is active
                 }
+                updateClickValue();
             }
         }, 1000);
     }
@@ -196,3 +201,4 @@ function updateTimer(seconds) {
 updateClickCount();
 updateBonus();
 updateTimer(-1); // Hide timer
+updateClickValue();
